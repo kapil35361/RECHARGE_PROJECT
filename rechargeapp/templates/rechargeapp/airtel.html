@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Recharge Detail</title>
+   
+
+</head>
+<body>
+    <h1>Recharge</h1>
+    
+        <table border='2'>
+            <thead>
+                
+                <th>Price</th>
+                <th>validity</th>
+                <th>data</th>
+                
+                
+            </thead>
+            {% for eachentry in airtel %}
+            <tr>
+                <td>{{eachentry.price}}</td>
+                <td>{{eachentry.validity}}</td>
+                <td>{{eachentry.data}}</td>
+                
+                
+            </tr>
+            {% endfor %}
+        </table>
+    
+
+    <br/>
+        
+   
+		<br/>
+    
+    <h1></h1>
+    <form method='post'>
+            <table>
+              {{form.as_table}}
+              {% csrf_token %}
+              
+            </table>
+            
+            <input type='submit' value='Save'>
+        </form>    
+       																
+</body>
+</html>
